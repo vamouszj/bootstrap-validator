@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="http://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script type="text/javascript" src="./bootstrap-validator.js"></script>
+</head>
+<body>
+	<div class="container info-div validator">
+		<div class="form-group">
+			<label class="control-label" for="email">邮箱</label>
+			<input type="text" name="" class="form-control" id="email" data-in-required="true" data-in-email="true" placeholder="请输入邮箱">
+			<!-- <span class="help-block">输入的内容正确</span> -->
+		</div>
+		<div class="form-group">
+			<label class="control-label" for="phone">手机号码</label>
+			<input type="text" name="" class="form-control" id="phone" data-in-mobile="true" placeholder="请输入密码">			
+		</div>
+		<div class="form-group">
+			<label class="control-label" for="password">密码</label>
+			<input type="text" name="" class="form-control" id="password" data-in-password="true" placeholder="6-21字母和数字组成">			
+		</div>
+		<div class="form-group">
+			<label class="control-label" for="username">用户名</label>
+			<input type="text" name="" id="username" class="form-control" id="password" data-in-name="true" placeholder="6-21字母和数字组成">		
+		</div>		
+		<div class="form-group">
+			<label class="control-label" for="age">年龄</label>
+			<input type="text" name="" id="username" class="form-control" id="age" data-in-required="true" data-in-min="20" data-in-integer="true" data-in-max="45" placeholder="输入年龄">		
+		</div>				
+	</div>
+	<script type="text/javascript">
+		$('.info-div').eq(0).bootstrapValidator({
+/*			showMessage : function($f, msg) {
+				alert(msg);
+			}*/
+		});
+	</script>
+</body>
+</html>
